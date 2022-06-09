@@ -15,12 +15,16 @@ Tree Structure :
               /   \         |       |
              /     \        |       |
            yes      no     MCI      KCV
-            |       /\ 
-            |      /  \
-         alpro   dev  network
-                  |      |
-                  |      |
-                 RPL    IGS
+            |       / \ 
+            |      /   \
+         alpro   dev    network
+                /  \       |
+               /    \      |
+          Graphics  SI    KBJ
+              |      |
+              |      |
+             IGS    RPL
+
 ```
 
 To run the program, go to workspace folder, then :

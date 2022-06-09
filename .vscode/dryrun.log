@@ -1,0 +1,6 @@
+make: Entering directory '/home/nuna/CODES/DATA STRUCTURE/Decision-Tree-Final-Project'
+g++    -c -o src/main.o src/main.cpp
+g++    -c -o src/utility.o src/utility.cpp
+g++  -o main ./src/main.o ./src/utility.o
+make: Leaving directory '/home/nuna/CODES/DATA STRUCTURE/Decision-Tree-Final-Project'
+ 
