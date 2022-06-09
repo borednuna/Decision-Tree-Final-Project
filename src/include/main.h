@@ -18,7 +18,9 @@ class Tree {
     void init();                // init Tree
     int isEmpty();              // return if tree is empty as boolean integer
     void hardCodedInsert();     // insert hardcoded parameters to tree
+    void userInputTraverse();   // start determining using user input
 
     private:
     node* newNode(std::string statement, std::string leftOp, std::string rightOp);     // create new node
+    node* userInputUtility(node* q);
 };

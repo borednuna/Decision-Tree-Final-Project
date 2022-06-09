@@ -1,11 +1,13 @@
 #include <iostream>
 #include <string>
 #include <stdlib.h>
+#include <cstdlib>
 #include "./include/main.h"
 
 void Tree::init() {
     root = NULL;
     size = 0u;
+    std::cout << "Tree initialized" << std::endl;
 }
 
 int Tree::isEmpty() {
@@ -19,6 +21,33 @@ node *Tree::newNode(std::string statement, std::string leftOp, std::string right
     newNode->rightOption = rightOp;
     newNode->left = newNode->right = NULL;
     return newNode;
+}
+
+node *Tree::userInputUtility(node* q) {
+    int opt;
+    while(q != NULL) {
+        system("clear");
+        std::cout << q->statement << std::endl;
+        if (q->leftOption != " " && q->rightOption != " ")
+            std::cout << "1." << q->leftOption << "\t2." << q->rightOption << std::endl;
+        std::cout << std::endl << ">> ";
+        std::cin >> opt;
+
+        if (opt == 1) {
+            return Tree::userInputUtility(q->left);
+        } else if (opt == 2) {
+            return Tree::userInputUtility(q->right);
+        } else {
+            return q;
+        }
+    }
+    return q;
+}
+
+void Tree::userInputTraverse() {
+    node* temp = userInputUtility(root);
+    std::cout << "Done traverse" << std::endl;
+    return;
 }
 
 void Tree::hardCodedInsert() {
@@ -47,7 +76,7 @@ void Tree::hardCodedInsert() {
     size++;
 
     newnode = newNode(
-        "Alpro",
+        "Peminatan : Alpro",
         " ",
         " "
     );
@@ -63,7 +92,7 @@ void Tree::hardCodedInsert() {
     size++;
 
     newnode = newNode(
-        "MCI",
+        "Peminatan : MCI",
         " ",
         " "
     );
@@ -71,7 +100,7 @@ void Tree::hardCodedInsert() {
     size++;
 
     newnode = newNode(
-        "KCV",
+        "Peminatan : KCV",
         " ",
         " "
     );
@@ -87,7 +116,7 @@ void Tree::hardCodedInsert() {
     size++;
 
     newnode = newNode(
-        "KBJ",
+        "Peminatan : KBJ",
         " ",
         " "
     );
@@ -95,7 +124,7 @@ void Tree::hardCodedInsert() {
     size++;
 
     newnode = newNode(
-        "IGS",
+        "Peminatan : IGS",
         " ",
         " "
     );
@@ -103,10 +132,12 @@ void Tree::hardCodedInsert() {
     size++;
 
     newnode = newNode(
-        "RPL",
+        "Peminatan : RPL",
         " ",
         " "
     );
     root->left->right->left->right = newnode;
     size++;
+
+    std::cout << "Done building tree" << std::endl << std::endl;
 }
