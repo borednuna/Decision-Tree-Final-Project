@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <stdlib.h>
-#include "./main.h"
+#include "./include/main.h"
 
 int main() {
     std::cout << "Success" << std::endl;

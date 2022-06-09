@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <stdlib.h>
-#include "./main.h"
+#include "./include/main.h"
 
 void Tree::init() {
     root = NULL;
