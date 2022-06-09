@@ -1,5 +1,5 @@
 # Decision-Tree-Final-Project
-Final project for my data structure class. This implements decision tree to determine user's subject interest in computer science study
+Final project for my data structure class. This implements decision tree to determine user's subject interest in computer science study. The subject interests are based on laboratories in ITS's CS major.
 
 
 ```
@@ -11,14 +11,14 @@ Tree Structure :
                software       data
                  |           /    \
                  |          /      \
-              algo      database    AI
-              /   \          |       |
-             /     \         |       |
-           yes      no      MI      KCV
+            algorithm    database   AI
+              /   \         |       |
+             /     \        |       |
+           yes      no     MCI      KCV
             |       /\ 
             |      /  \
          alpro   dev  network
                   |      |
                   |      |
-                RPL     IGS
+                 RPL    IGS
 ```
