@@ -22,3 +22,10 @@ Tree Structure :
                   |      |
                  RPL    IGS
 ```
+
+To run the program, go to workspace folder, then :
+
+```
+make
+./main
+```
