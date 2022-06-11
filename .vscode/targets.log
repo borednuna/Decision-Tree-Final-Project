@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jun 10 06:56:00 2022
+# Make data base, printed on Sat Jun 11 02:45:53 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ SNAP_DATA = /var/snap/code/97
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:55333
+JOURNAL_STREAM = 8:55379
 # makefile (from 'Makefile', line 2)
 CFLAGS = -g -Wall
 # environment
@@ -79,7 +79,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 _ = /snap/code/97/usr/share/code/code
 # environment
-MANAGERPID = 1613
+MANAGERPID = 1650
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -95,7 +95,7 @@ PATH = /home/nuna/.local/bin:/home/nuna/.local/bin:/home/nuna/.local/bin:/usr/lo
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/nuna-ZenBook-UX425EA-UX425EA:@/tmp/.ICE-unix/1832,unix/nuna-ZenBook-UX425EA-UX425EA:/tmp/.ICE-unix/1832
+SESSION_MANAGER = local/nuna-ZenBook-UX425EA-UX425EA:@/tmp/.ICE-unix/1869,unix/nuna-ZenBook-UX425EA-UX425EA:/tmp/.ICE-unix/1869
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -113,7 +113,7 @@ DISABLE_WAYLAND = 1
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = da5ae9ca2af34e1ba858858de4203432
+INVOCATION_ID = f47b206ec47e418a90cb03d859e286b6
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/97/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -125,7 +125,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 91487
+GIO_LAUNCHED_DESKTOP_FILE_PID = 16469
 # automatic
 %F = $(notdir $%)
 # environment
@@ -139,7 +139,7 @@ PWD = /home/nuna/CODES/DATA STRUCTURE/Decision-Tree-Final-Project
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1793
+SSH_AGENT_PID = 1831
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -193,7 +193,7 @@ CC = g++
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-76c94ea1-b74c-43ef-85b3-844a7a38f788.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d8deec44-c63c-408f-9752-00ceca94b61e.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -273,20 +273,19 @@ LC_ADDRESS = id_ID.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 91532
+VSCODE_PID = 16520
 # variable set hash-table stats:
 # Load=131/1024=13%, Rehash=0, Collisions=23/156=15%
 
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
- 
 
 # Directories
 
-# . (device 66310, inode 1472191): 9 files, no impossibilities.
+# . (device 66310, inode 1472191): 8 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 8 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -308,9 +307,10 @@ src/main.o:
 #  File has not been updated.
 
 # Not a target:
+ 
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-09 10:36:05.22413175
+#  Last modified 2022-06-10 10:05:56.860798672
 #  File has been updated.
 #  Successfully updated.
 
@@ -350,7 +350,6 @@ clean:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 16):
 	$(RM) main *.o *~
-	
 
 # Not a target:
 src/main.cpp:
@@ -389,9 +388,9 @@ src/utility.cpp:
 # strcache buffers: 1 (0) / strings = 23 / storage = 216 B / avg = 9 B
 # current buf: size = 8162 B / used = 216 B / count = 23 / avg = 9 B
 
-# strcache performance: lookups = 35 / hit rate = 34%
+# strcache performance: lookups = 34 / hit rate = 32%
 # hash-table stats:
-# Load=23/8192=0%, Rehash=0, Collisions=1/35=3%
-# Finished Make data base on Fri Jun 10 06:56:00 2022
+# Load=23/8192=0%, Rehash=0, Collisions=1/34=3%
+# Finished Make data base on Sat Jun 11 02:45:53 2022
 
  

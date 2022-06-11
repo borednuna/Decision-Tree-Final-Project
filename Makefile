@@ -14,4 +14,3 @@ utility.o: ./src/utility.cpp ./src/include/main.h
 
 clean:
 	$(RM) main *.o *~
-	

@@ -1,0 +1,6 @@
+Thalib Data Database
+Fauzi Data Kecerdasan_Buatan
+Anas Perangkat_Lunak Ya
+Yogi Perangkat_Lunak Tidak Software_Development Grafis
+Sofi Perangkat_Lunak Tidak Jaringan
+Nizaar Perangkat_Lunak Tidak Sistem_Informasi

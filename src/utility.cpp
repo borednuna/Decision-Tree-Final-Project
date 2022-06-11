@@ -2,6 +2,8 @@
 #include <string>
 #include <stdlib.h>
 #include <cstdlib>
+#include <fstream>
+#include <queue>
 #include "./include/main.h"
 
 void Tree::init() {
@@ -14,7 +16,7 @@ int Tree::isEmpty() {
     return(root == NULL);
 }
 
-node *Tree::newNode(std::string statement, std::string leftOp, std::string rightOp) {
+node* Tree::newNode(std::string statement, std::string leftOp, std::string rightOp) {
     node *newNode = (node*) malloc(sizeof(node));
     newNode->statement = statement;
     newNode->leftOption = leftOp;
@@ -23,7 +25,7 @@ node *Tree::newNode(std::string statement, std::string leftOp, std::string right
     return newNode;
 }
 
-node *Tree::userInputUtility(node* q) {
+node* Tree::userInputUtility(node* q) {
     int opt;
     while(q != NULL) {
         system("clear");
@@ -140,4 +142,81 @@ void Tree::hardCodedInsert() {
     size++;
 
     std::cout << "Done building tree" << std::endl << std::endl;
+}
+
+std::queue<std::string> Tree::tokenize(std::string strLine) {
+    std::queue<std::string> temp;
+        std::string token = "";
+        for (auto x = strLine.begin(); x != strLine.end(); x++) {
+            if (*x == ' ') {
+                temp.push(token);
+                token.erase(token.begin(), token.end());
+            } else {
+                token = token + *x;
+            }
+        }
+        temp.push(token);
+
+    return temp;
+}
+
+node* Tree::fileTraverseHelper(node* q, std::queue<std::string> parameter) {
+    while(q != NULL) {
+        if (parameter.front() == q->leftOption) {
+            parameter.pop();
+            return fileTraverseHelper(q->left, parameter);
+        } else if (parameter.front() == q->rightOption) { {
+            parameter.pop();
+            return fileTraverseHelper(q->right, parameter);
+        }
+        return q;
+    }
+}
+}
+
+std::string Tree::fileInputTrvrs(std::queue<std::string> sequence) {
+    // std::cout << strIn << std::endl;
+    // std::cout << sequence.front();
+    // return sequence.front();
+    node* temp = fileTraverseHelper(root, sequence);
+    return temp->statement;
+}
+
+void Tree::fileInputTraverse() {
+    system("clear");
+    std::fstream inputFile, outputFile;
+    inputFile.open("./src/data/input.txt", std::ios::in);
+    outputFile.open("./src/data/output.txt", std::ios::out);
+
+    if (!inputFile || !outputFile) {
+        std::cout << "File not found" << std::endl;
+    } else {
+        std::cout << "File is open" << std::endl;
+    }
+
+    std::string strLine, strOut, userName;
+    while (std::getline(inputFile, strLine)) {
+        std::queue<std::string> sequence = tokenize(strLine);
+        userName = sequence.front();
+        sequence.pop();
+        strOut = fileInputTrvrs(sequence);
+    }
+
+    std::string n = "x";
+    while(n != "e") {
+        std::cout << std::endl << "Input e to continue ..." << std::endl;
+        std::cin >> n;
+    }
+
+    inputFile.close();
+    outputFile.close();
+}
+
+void getProgramHeader() {
+    std::cout << " ==================================================" << std::endl;
+    std::cout << "|               Desicion Tree Program              |" << std::endl;
+    std::cout << "|     Topic : CS Subject Interest Determination    |" << std::endl;
+    std::cout << "|                 Hanun Shaka Puspa                |" << std::endl;
+    std::cout << "|                    5025211051                    |" << std::endl;
+    std::cout << " ==================================================" << std::endl << std::endl;
 }
