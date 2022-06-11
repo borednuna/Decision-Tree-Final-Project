@@ -165,19 +165,18 @@ node* Tree::fileTraverseHelper(node* q, std::queue<std::string> parameter) {
         if (parameter.front() == q->leftOption) {
             parameter.pop();
             return fileTraverseHelper(q->left, parameter);
-        } else if (parameter.front() == q->rightOption) { {
+        } else if (parameter.front() == q->rightOption) {
             parameter.pop();
             return fileTraverseHelper(q->right, parameter);
+        } else {
+            return q;
         }
-        return q;
     }
-}
+    std::cout << q->statement << std::endl;
+    return q;
 }
 
 std::string Tree::fileInputTrvrs(std::queue<std::string> sequence) {
-    // std::cout << strIn << std::endl;
-    // std::cout << sequence.front();
-    // return sequence.front();
     node* temp = fileTraverseHelper(root, sequence);
     return temp->statement;
 }
@@ -194,13 +193,17 @@ void Tree::fileInputTraverse() {
         std::cout << "File is open" << std::endl;
     }
 
-    std::string strLine, strOut, userName;
+    std::string strLine, strOut, userName, inputLine;
     while (std::getline(inputFile, strLine)) {
         std::queue<std::string> sequence = tokenize(strLine);
         userName = sequence.front();
         sequence.pop();
         strOut = fileInputTrvrs(sequence);
+        std::cout << userName << " - " << strOut << std::endl;
+        inputLine = userName + " - " + strOut;
+        outputFile << inputLine << std::endl;
     }
+    std::cout << "Done writing result to file" << std::endl << std::endl;
 
     std::string n = "x";
     while(n != "e") {
